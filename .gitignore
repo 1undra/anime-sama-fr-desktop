@@ -1,7 +1,4 @@
-node_modules
-dist
-CHANGELOG.html
 README.html
-package-lock.json
-
-out
+src-tauri/target
+src-tauri/gen
+.github

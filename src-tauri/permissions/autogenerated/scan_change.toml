@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-scan-change"
+description = "Enables the scan_change command without any pre-configured scope."
+commands.allow = ["scan_change"]
+
+[[permission]]
+identifier = "deny-scan-change"
+description = "Denies the scan_change command without any pre-configured scope."
+commands.deny = ["scan_change"]

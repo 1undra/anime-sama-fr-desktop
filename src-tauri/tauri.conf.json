@@ -1,0 +1,53 @@
+{
+    "$schema": "https://schema.tauri.app/config/2",
+    "productName": "Anime Sama",
+    "version": "1.0.18",
+    "identifier": "com.anime-sama.desktop",
+    "build": {
+        "frontendDist": "../dist"
+    },
+    "app": {
+        "withGlobalTauri": true,
+        "windows": [],
+        "security": {
+            "csp": null,
+            "capabilities": [
+                "default"
+            ]
+        }
+    },
+    "bundle": {
+        "active": true,
+        "targets": [
+            "nsis",
+            "msi"
+        ],
+        "icon": [
+            "icons/icon.png",
+            "icons/icon.ico"
+        ],
+        "copyright": "MPL-2.0 2026 Trax",
+        "category": "Entertainment",
+        "shortDescription": "The anime-sama.to desktop app!",
+        "longDescription": "The anime-sama.to desktop app!",
+        "windows": {
+            "nsis": {
+                "installMode": "currentUser",
+                "languages": [
+                    "English",
+                    "French"
+                ],
+                "displayLanguageSelector": false
+            }
+        }
+    },
+    "plugins": {
+        "deep-link": {
+            "desktop": {
+                "schemes": [
+                    "anime-sama-to"
+                ]
+            }
+        }
+    }
+}

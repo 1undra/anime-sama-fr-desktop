@@ -1,0 +1,37 @@
+{
+    "$schema": "../gen/schemas/desktop-schema.json",
+    "identifier": "default",
+    "description": "Capability for the Anime Sama windows",
+    "windows": [
+        "main",
+        "splash"
+    ],
+    "remote": {
+        "urls": [
+            "https://anime-sama.to/*",
+            "https://*.anime-sama.to/*"
+        ]
+    },
+    "permissions": [
+        "core:default",
+        "core:window:allow-start-dragging",
+        "core:window:allow-is-maximized",
+        "allow-window-minimize",
+        "allow-window-maximize",
+        "allow-window-close",
+        "allow-window-home",
+        "allow-window-state",
+        "allow-delete-all-history",
+        "allow-delete-all-watchlist",
+        "allow-delete-all-favorite",
+        "allow-delete-history",
+        "allow-delete-watchlist",
+        "allow-delete-favorite",
+        "allow-episode-change",
+        "allow-scan-change",
+        "allow-watchlist-change",
+        "allow-favorite-change",
+        "allow-media-state",
+        "allow-video-progress"
+    ]
+}

@@ -1,0 +1,34 @@
+[package]
+name = "anime-sama"
+version = "1.0.18"
+description = "The anime-sama.to desktop app!"
+authors = ["Trax"]
+license = "MPL-2.0"
+edition = "2021"
+rust-version = "1.77.2"
+
+[lib]
+name = "anime_sama_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon", "image-png"] }
+tauri-plugin-autostart = "2"
+tauri-plugin-deep-link = "2"
+tauri-plugin-dialog = "2"
+tauri-plugin-global-shortcut = "2"
+tauri-plugin-opener = "2"
+tauri-plugin-single-instance = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+url = "2"
+ureq = { version = "2", features = ["json"] }
+adblock = { version = "0.13", default-features = false, features = ["embedded-domain-resolver", "full-regex-handling"] }
+sys-locale = "0.3"
+
+[target.'cfg(windows)'.dependencies]
+webview2-com = "0.39"
+windows = "0.62"

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-watchlist-change"
+description = "Enables the watchlist_change command without any pre-configured scope."
+commands.allow = ["watchlist_change"]
+
+[[permission]]
+identifier = "deny-watchlist-change"
+description = "Denies the watchlist_change command without any pre-configured scope."
+commands.deny = ["watchlist_change"]
