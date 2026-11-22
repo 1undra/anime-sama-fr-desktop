@@ -35,12 +35,6 @@
     <a id="readme-shield-commit-activity-by-month">
         <img id="readme-shield-commit-activity-by-month-img" src="https://img.shields.io/github/commit-activity/m/traxcs/anime-sama-fr-desktop?cacheSeconds=3600" alt="Commit activity by month" />
     </a>
-    <a id="readme-shield-version">
-        <img id="readme-shield-version-img" src="https://img.shields.io/github/package-json/v/traxcs/anime-sama-fr-desktop?cacheSeconds=3600" alt="Version" />
-    </a>
-    <a id="readme-shield-main-file" href="./index.js">
-        <img id="readme-shield-main-file-img" src="https://img.shields.io/github/package-json/main/traxcs/anime-sama-fr-desktop?cacheSeconds=3600" alt="Main file" />
-    </a>
     <a id="readme-shield-languages">
         <img id="readme-shield-languages-img" src="https://img.shields.io/github/languages/count/traxcs/anime-sama-fr-desktop?cacheSeconds=3600" alt="Languages" />
     </a>
