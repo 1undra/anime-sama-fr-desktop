@@ -47,7 +47,7 @@ fn rename_sessions(exe_path: &str) {
                     if !is_our_webview2(pid) {
                         continue;
                     }
-                    let _ = control2.SetDisplayName(&HSTRING::from("AnimeSama"), std::ptr::null());
+                    let _ = control2.SetDisplayName(&HSTRING::from("Anime-Sama"), std::ptr::null());
                     let icon = HSTRING::from(format!("{},0", exe_path));
                     let _ = control2.SetIconPath(&icon, std::ptr::null());
                 }
