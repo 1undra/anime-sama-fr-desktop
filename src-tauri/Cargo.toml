@@ -1,6 +1,6 @@
 [package]
 name = "anime-sama"
-version = "1.0.20"
+version = "1.0.21"
 description = "The anime-sama.to desktop app!"
 authors = ["Trax"]
 license = "MPL-2.0"
