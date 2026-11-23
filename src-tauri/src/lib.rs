@@ -1,5 +1,9 @@
 mod adblock;
+#[cfg(windows)]
+mod audio;
 mod discord;
+#[cfg(windows)]
+mod identity;
 mod menu;
 mod navigation;
 mod profile;
@@ -1057,6 +1061,8 @@ fn video_progress(app: AppHandle, current: f64, duration: f64) {
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
+    #[cfg(windows)]
+    identity::set_process_app_user_model_id();
     tauri::Builder::default()
         .plugin(tauri_plugin_single_instance::init(|app, argv, _cwd| {
             for arg in &argv {
@@ -1100,6 +1106,11 @@ pub fn run() {
             video_progress
         ])
         .setup(|app| {
+            #[cfg(windows)]
+            if let Ok(exe_path) = std::env::current_exe() {
+                audio::spawn_audio_session_fixer(exe_path.to_string_lossy().into_owned());
+            }
+
             let config_dir = app.path().app_config_dir()?;
             let cache_dir = app.path().app_cache_dir()?;
             std::fs::create_dir_all(&config_dir).ok();
@@ -1156,7 +1167,7 @@ pub fn run() {
             });
 
             if !settings.start_hidden {
-                let _ =
+                let splash =
                     WebviewWindowBuilder::new(app, "splash", WebviewUrl::App("splash.html".into()))
                         .title("Anime Sama")
                         .devtools(false)
@@ -1173,6 +1184,14 @@ pub fn run() {
                             }
                         })
                         .build();
+                #[cfg(windows)]
+                if let Ok(splash) = splash {
+                    if let Ok(hwnd) = splash.hwnd() {
+                        identity::set_window_app_user_model_id(hwnd);
+                    }
+                }
+                #[cfg(not(windows))]
+                let _ = splash;
             }
 
             let args: Vec<String> = std::env::args().collect();
@@ -1234,6 +1253,11 @@ pub fn run() {
                     }
                 })
                 .build()?;
+
+            #[cfg(windows)]
+            if let Ok(hwnd) = window.hwnd() {
+                identity::set_window_app_user_model_id(hwnd);
+            }
 
             if settings.adblock {
                 adblock::apply(&window);

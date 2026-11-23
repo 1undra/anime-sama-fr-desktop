@@ -1,7 +1,7 @@
-﻿version: 1.0.18
+﻿version: 1.0.20
 files:
   - url: Anime-Sama.exe
-    sha512: IswAqB30dLbIn70LrkTYG6Hvtgaucl0Uzz8aVhAY6ID9a2bS3P7k2CPDvPTMkeS4vOzvKB6rmr/Z1XtHTlX6mw==
+    sha512: gpp2JlbWW5L+MQNxi8rtvNPut8oAugO0XcMj04+YqfSHHN8/IQL96o/fzvg7gIxi8d9I2s7Ikk/V5ZHYWwDdKw==
 path: Anime-Sama.exe
-sha512: IswAqB30dLbIn70LrkTYG6Hvtgaucl0Uzz8aVhAY6ID9a2bS3P7k2CPDvPTMkeS4vOzvKB6rmr/Z1XtHTlX6mw==
-releaseDate: '2026-11-22T17:38:16.538Z'
+sha512: gpp2JlbWW5L+MQNxi8rtvNPut8oAugO0XcMj04+YqfSHHN8/IQL96o/fzvg7gIxi8d9I2s7Ikk/V5ZHYWwDdKw==
+releaseDate: '2026-11-23T10:39:27.152Z'
