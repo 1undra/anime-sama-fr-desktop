@@ -20,7 +20,7 @@ use windows::Win32::System::Diagnostics::ToolHelp::{
 pub fn spawn_audio_session_fixer(exe_path: String) {
     std::thread::spawn(move || loop {
         rename_sessions(&exe_path);
-        std::thread::sleep(Duration::from_secs(3));
+        std::thread::sleep(Duration::from_millis(100));
     });
 }
 
